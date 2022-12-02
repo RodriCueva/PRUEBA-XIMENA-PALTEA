@@ -129,6 +129,11 @@ t0 = estado
 st.subheader(t0)
 st.dataframe(df_visualizacion)
 
+t1 = '• Cantidad de cuencas según los '+estado+'' 
+st.subheader(t1)
+df_cuenca_freq = pd.DataFrame(df_visualizacion["CUENTA"].value_counts())
+st.bar_chart(df_cuenca_freq)
+
 t2 = '• Cantidad de estaciones según los '+estado+'' 
 st.subheader(t2)
 df_anho_freq = pd.DataFrame(df_visualizacion["ESTACION"].value_counts())
