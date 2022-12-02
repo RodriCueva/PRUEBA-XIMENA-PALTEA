@@ -140,8 +140,8 @@ df_precip_freq = pd.DataFrame(df_visualizacion["CAUDAL07H"].value_counts())
 st.line_chart(df_precip_freq)
 
 ####
-t5 = '• Porcentaje de datos en los distritos según '+estado+''
-st.subheader(t5)
+t4 = '• Porcentaje de datos en los distritos según '+estado+''
+st.subheader(t4)
 df_actividad_freq = pd.DataFrame(df_visualizacion["DISTRITO"].value_counts())
 labels = df_actividad_freq.index.tolist()
 sizes = df_actividad_freq["DISTRITO"].tolist()
