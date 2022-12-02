@@ -17,10 +17,6 @@ import altair as alt
 import urllib.request
 import base64
 
-#from pyecharts import options as opts
-from pyecharts.charts import Bar
-from streamlit_echarts import st_pyecharts
-from streamlit_echarts import st_echarts
 
 
 st.title('Datos Hidrometereológicos Gobierno Regional Piura')
@@ -144,36 +140,6 @@ df_precip_freq = pd.DataFrame(df_visualizacion["CAUDAL07H"].value_counts())
 st.line_chart(df_precip_freq)
 
 
-####
-
-tipo1=df["METODODX"].value_counts().PCR
-tipo2=df["METODODX"].value_counts().AG
-tipo3=df["METODODX"].value_counts().PR
-options = {
-        "title": {"text": " ", "left": "center"},
-        "tooltip": {"trigger": "item"},
-        "legend": {"orient": "vertical", "left": "left",},
-        "series": [
-            {
-                "name": "Tipo de prueba",
-                "type": "pie",
-                "radius": "50%",
-                "data": [
-                    {"value": int(tipo1), "name": "PCR"},
-                    {"value": int(tipo2), "name": "AG"},
-                    {"value": int(tipo3), "name": "PR"},
-                ],
-                "emphasis": {
-                    "itemStyle": {
-                        "shadowBlur": 10,
-                        "shadowOffsetX": 0,
-                        "shadowColor": "rgba(0, 0, 0, 0.5)",
-                    }
-                },
-            }
-        ],
-    }
-st_echarts(options=options, height="600px",)
 
 #####
 t1 = '• Frecuencia de los proyectos '+estado+' según la clasificación ACTIVIDAD'
