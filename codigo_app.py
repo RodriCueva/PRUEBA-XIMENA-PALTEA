@@ -1,11 +1,6 @@
 #$ pip install streamlit --upgrade
 #$ pip install matplotlib
-"""
-Instalacion de paquetes:
-pip install geopandas
-pip install Shapely
-pip install matplotlib
-"""
+
 import pandas as pd
 
 #import plotly.express as px
