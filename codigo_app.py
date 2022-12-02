@@ -125,29 +125,42 @@ elif opcion_dataset == 'Sullana':
     estado = 'Datos de la provincia de Sullana'
 
 #Con fé dá.
+
 ###
+
 t0 = estado 
 st.subheader(t0)
 st.dataframe(df_visualizacion)
+st.write('Gráfica de los datos generales de la provincia seleccionada')
 st.markdown("---")
+
 ###
+
 t1 = '• Cantidad de cuencas según los '+estado+'' 
 st.subheader(t1)
 df_cuenca_freq = pd.DataFrame(df_visualizacion["CUENTA"].value_counts())
 st.bar_chart(df_cuenca_freq)
+st.write('Figura 1. Gráfica del nombre de cuencas en la provincia seleccionada')
 st.markdown("---")
+
 ###
+
 t2 = '• Cantidad de estaciones según los '+estado+'' 
 st.subheader(t2)
 df_anho_freq = pd.DataFrame(df_visualizacion["ESTACION"].value_counts())
 st.bar_chart(df_anho_freq)
+st.write('Figura 2. Gráfica de nombre de las estaciones hidrometeorológicas en la provincia seleccionada')
 st.markdown("---")
+
 ###
+
 t3= '• Medida del caudal a las 07:00 horas según los '+estado+'' 
 st.subheader(t3)
 df_precip_freq = pd.DataFrame(df_visualizacion["CAUDAL07H"].value_counts())
 st.line_chart(df_precip_freq)
+st.write('Figura 3. Gráfica de las medidas del caudal en la provincia seleccionada')
 st.markdown("---")
+
 ###
 
 t4 = '• Porcentaje de datos en los distritos según '+estado+''
@@ -163,11 +176,11 @@ ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig1)
 st.write('Figura 4. Gráfica circular del porcentaje datos en los distritos de la provincia seleccionada')
 st.markdown("---")
+
 ###
 
 t5 = '• Porcentaje del tipo de estación según los '+estado+'' 
 st.subheader(t5)
-st.markdown("##")
 df_tipo_freq = pd.DataFrame(df_visualizacion["TIPO_ESTACION"].value_counts())
 labels = df_tipo_freq.index.tolist()
 sizes = df_tipo_freq["TIPO_ESTACION"].tolist()
