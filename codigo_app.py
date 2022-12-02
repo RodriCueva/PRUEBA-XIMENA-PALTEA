@@ -139,20 +139,6 @@ st.subheader(t3)
 df_precip_freq = pd.DataFrame(df_visualizacion["CAUDAL07H"].value_counts())
 st.line_chart(df_precip_freq)
 
-t4 = '• Frecuencia de los proyectos '+estado+' según la clasificación ACTIVIDAD'
-st.subheader(t4)
-st.markdown("##")
-df_actividad_freq = pd.DataFrame(df_visualizacion["DISTRITO"].value_counts())
-labels = df_actividad_freq.index.tolist()
-sizes = df_actividad_freq["DISTRITO"].tolist()
-fig1, ax1 = plt.subplots()
-ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
-startangle=0)
-#plt.title('Distribucion de datos segun ACTIVIDAD')
-ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-st.pyplot(fig1)
-st.write('Figura 1. Gráfica pie de los proyectos con la frecuencia según la ACTIVIDAD de proyecto.')
-
 #####
 t1 = '• Frecuencia de los proyectos '+estado+' según la clasificación ACTIVIDAD'
 st.subheader(t1)
