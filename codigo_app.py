@@ -14,8 +14,8 @@ from datetime import datetime
 from PIL import Image
 
 import altair as alt
-#import urllib.request
-#import base64
+import urllib.request
+import base64
 
 
 
