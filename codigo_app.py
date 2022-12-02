@@ -139,7 +139,7 @@ st.subheader(t2)
 df_anho_freq = pd.DataFrame(df_visualizacion["ESTACION"].value_counts())
 st.bar_chart(df_anho_freq)
 
-t3= '• Cantidad de caudal según los '+estado+'' 
+t3= '• Medida del caudal a las 07:00 horas según los '+estado+'' 
 st.subheader(t3)
 df_precip_freq = pd.DataFrame(df_visualizacion["CAUDAL07H"].value_counts())
 st.line_chart(df_precip_freq)
@@ -157,5 +157,20 @@ startangle=0)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig1)
 #st.write('Figura 1. Porcentaje de .')
+
+t5 = '• Porcentaje de tipo de estaciones según los '+estado+'' 
+st.subheader(t5)
+st.markdown("##")
+df_tipo_freq = pd.DataFrame(df_visualizacion["TIPO_ESTACIÓN"].value_counts())
+labels = df_tipo_freq.index.tolist()
+sizes = df_tipo_freq["TIPO_ESTACIÓN"].tolist()
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+startangle=0, textprops={'fontsize': 10})
+#plt.title('Distribucion de datos segun TIPO')
+ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+st.pyplot(fig1)
+#st.write('Figura 2. Gráfica pie de los proyectos con la frecuencia según el TIPO de proyecto.')
+
 
 
