@@ -161,9 +161,9 @@ st.pyplot(fig1)
 t5 = '• Porcentaje de tipo de estaciones según los '+estado+'' 
 st.subheader(t5)
 st.markdown("##")
-df_tipo_freq = pd.DataFrame(df_visualizacion["TIPO_ESTACIÓN"].value_counts())
+df_tipo_freq = pd.DataFrame(df_visualizacion["TIPO_ESTACION"].value_counts())
 labels = df_tipo_freq.index.tolist()
-sizes = df_tipo_freq["TIPO_ESTACIÓN"].tolist()
+sizes = df_tipo_freq["TIPO_ESTACION"].tolist()
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
 startangle=0, textprops={'fontsize': 10})
