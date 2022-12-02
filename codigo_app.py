@@ -2,14 +2,14 @@
 #$ pip install matplotlib
 
 import pandas as pd
-
-#import plotly.express as px
+from matplotlib import pyplot as plt
+import plotly.express as px
 
 import numpy as np
 import streamlit as st
 from datetime import datetime
 
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 from PIL import Image
 
