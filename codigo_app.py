@@ -1,5 +1,5 @@
 #$ pip install streamlit --upgrade
-pip install matplotlib
+#$ pip install matplotlib
 
 import pandas as pd
 
