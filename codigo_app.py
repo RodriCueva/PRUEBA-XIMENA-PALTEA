@@ -17,7 +17,7 @@ import altair as alt
 import urllib.request
 import base64
 
-from pyecharts import options as opts
+#from pyecharts import options as opts
 from pyecharts.charts import Bar
 from streamlit_echarts import st_pyecharts
 from streamlit_echarts import st_echarts
