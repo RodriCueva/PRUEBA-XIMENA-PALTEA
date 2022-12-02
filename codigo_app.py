@@ -140,7 +140,7 @@ df_precip_freq = pd.DataFrame(df_visualizacion["CAUDAL07H"].value_counts())
 st.line_chart(df_precip_freq)
 
 ####
-t5 = '• Frecuencia de los proyectos '+estado+' según la clasificación ACTIVIDAD'
+t5 = '• Porcentaje de datos en los distritos según '+estado+''
 st.subheader(t5)
 df_actividad_freq = pd.DataFrame(df_visualizacion["DISTRITO"].value_counts())
 labels = df_actividad_freq.index.tolist()
@@ -151,20 +151,6 @@ startangle=0)
 #plt.title('Distribucion de datos segun ACTIVIDAD')
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig1)
-st.write('Figura 1. Gráfica pie de los proyectos con la frecuencia según la ACTIVIDAD de proyecto.')
+#st.write('Figura 1. Porcentaje de .')
 
 
-#####
-t1 = '• Frecuencia de los proyectos '+estado+' según la clasificación ACTIVIDAD'
-st.subheader(t1)
-source = pd.DataFrame(df_visualizacion[{"category": ["DISTRITO"], "value": [PROMEDIO24H]}]) 
-
-base = alt.Chart(source).encode(
-    theta=alt.Theta("value:Q", stack=True), color=alt.Color("category:N", legend=None)
-)
-
-pie = base.mark_arc(outerRadius=120)
-text = base.mark_text(radius=140, size=20).encode(text="DISTRITO")
-
-pie + text
-	
