@@ -103,6 +103,7 @@ opcion_dataset = st.selectbox(
     )
 
 #DATOS DE CADA PROVINCIA
+df_latlog= pd.read_csv('latylog progra.csv')
 datos_Ayabaca= pd.read_csv('Ayabaca_Piura3.csv')
 datos_Morropon= pd.read_csv('Morropon_Piura.csv')
 datos_Piura= pd.read_csv('Piura_Piura.csv')
@@ -125,6 +126,10 @@ elif opcion_dataset == 'Sullana':
     estado = 'Datos de la provincia de Sullana'
 
 #Con fé dá.
+st.markdown("##") # Linea en blanco
+df_latlog = df_latlog.rename(columns={'latitud':'lat', 'longitud':'lon'})
+st.map(df_latlog[['lat','lon']])
+st.write('Figura 6. Ubicación de los proyectos',estado,'.')
 
 ###
 
