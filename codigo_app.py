@@ -126,7 +126,6 @@ elif opcion_dataset == 'Sullana':
     df_visualizacion = datos_Sullana
     estado = 'Datos de la provincia de Sullana'
 	
-st.markdown("---")
 #Con fé dá.
 st.markdown("##") # Linea en blanco
 df_latlog = df_latlog.rename(columns={'latitud':'lat', 'longitud':'lon'})
