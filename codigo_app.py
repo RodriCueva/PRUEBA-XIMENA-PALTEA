@@ -29,7 +29,7 @@ st.markdown("""
 	   Peruana Cayetano Heredia. Como proyecto final del curso “Programación Avanzada”,realizamos esta página en base a los conocimientos 
 	   adquiridos en las clases teóricas y prácticas durante del ciclo, junto a la asesoría y enseñansas de nuestros profesores.
 	   """) 
-image = Image.open('tenorio el papi.jpg')
+image = Image.open('tenorio el papi (2).jpg')
 st.image(image, caption='Futuros Ingenieros Ambientales', use_column_width=True)
 
 st.header('Agua y saneamiento')
