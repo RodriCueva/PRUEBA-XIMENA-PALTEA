@@ -23,11 +23,11 @@ st.title('Datos Hidrometereológicos Gobierno Regional Piura')
 
 st.markdown("""Esta pagina web "app" exploratoria permite visualizar a cualquier usuario los datos hidrometereológicos del Gobierno Regional de Piura""")
 
-st.header('Nosotros el Equipo 3 pes profe Tssss!')
+st.header('Nosotros el Equipo 3')
 st.markdown("""
            Somos un exelente grupo de estudiantes que se encuentra cursando el 5to ciclo de la carrera de Ingeniería Ambiental en la Universidad 
 	   Peruana Cayetano Heredia. Como proyecto final del curso “Programación Avanzada”,realizamos esta página en base a los conocimientos 
-	   adquiridos en las clases teóricas y prácticas durante del ciclo, junto a la asesoría y enseñansas de nuestros profesores, Fonse <3.
+	   adquiridos en las clases teóricas y prácticas durante del ciclo, junto a la asesoría y enseñansas de nuestros profesores.
 	   """) 
 image = Image.open('tenorio el papi.jpg')
 st.image(image, caption='Futuros Ingenieros Ambientales', use_column_width=True)
