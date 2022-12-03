@@ -31,7 +31,7 @@ st.markdown("""
 	   """) 
 image = Image.open('tenorio el papi (2).jpg')
 st.image(image, caption='Futuros Ingenieros Ambientales', use_column_width=True)
-
+st.markdown("---")
 st.header('Agua y saneamiento')
 st.markdown("""
 	Contiene los datos Hidrometeorológicos del Sistema Hidráulico Mayor a cargo del  Proyecto Especial Chira Piura.
@@ -89,7 +89,7 @@ datos= pd.read_csv('DATOS_HIDROMETEREOLOGICOS_GORE_PIURA_2.csv')
 #st.dataframe(datos)
 
 st.subheader('Conteo de datos en las diferente provincias de Piura')
-
+st.markdown("---")
 df_anho_freq = pd.DataFrame(datos["PROVINCIA"].value_counts())
 st.bar_chart(df_anho_freq)
 st.header('Análisis exploratorio')
