@@ -125,13 +125,14 @@ elif opcion_dataset == 'Piura':
 elif opcion_dataset == 'Sullana':
     df_visualizacion = datos_Sullana
     estado = 'Datos de la provincia de Sullana'
-
+	
+st.markdown("---")
 #Con fé dá.
 st.markdown("##") # Linea en blanco
 df_latlog = df_latlog.rename(columns={'latitud':'lat', 'longitud':'lon'})
 st.map(df_latlog[['lat','lon']])
 st.write('Figura 1. Ubicación de las centrales hidrometeorológicas.')
-
+st.markdown("---")
 ###
 
 t0 = estado 
