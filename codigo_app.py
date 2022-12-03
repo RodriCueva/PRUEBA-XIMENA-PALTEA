@@ -129,14 +129,14 @@ elif opcion_dataset == 'Sullana':
 st.markdown("##") # Linea en blanco
 df_latlog = df_latlog.rename(columns={'latitud':'lat', 'longitud':'lon'})
 st.map(df_latlog[['lat','lon']])
-st.write('Figura 6. Ubicación de los proyectos',estado,'.')
+st.write('Figura 1. Ubicación de las centrales hidrometeorológicas.')
 
 ###
 
 t0 = estado 
 st.subheader(t0)
 st.dataframe(df_visualizacion)
-st.write('Gráfica de los datos generales de la provincia seleccionada')
+st.write('Figura 2. Gráfica de los datos generales de la provincia seleccionada')
 st.markdown("---")
 
 ###
@@ -145,7 +145,7 @@ t1 = '• Cantidad de cuencas según los '+estado+''
 st.subheader(t1)
 df_cuenca_freq = pd.DataFrame(df_visualizacion["CUENTA"].value_counts())
 st.bar_chart(df_cuenca_freq)
-st.write('Figura 1. Gráfica del nombre de cuencas en la provincia seleccionada')
+st.write('Figura 3. Gráfica del nombre de cuencas en la provincia seleccionada')
 st.markdown("---")
 
 ###
@@ -154,7 +154,7 @@ t2 = '• Cantidad de estaciones según los '+estado+''
 st.subheader(t2)
 df_anho_freq = pd.DataFrame(df_visualizacion["ESTACION"].value_counts())
 st.bar_chart(df_anho_freq)
-st.write('Figura 2. Gráfica de nombre de las estaciones hidrometeorológicas en la provincia seleccionada')
+st.write('Figura 4. Gráfica de nombre de las estaciones hidrometeorológicas en la provincia seleccionada')
 st.markdown("---")
 
 ###
@@ -163,7 +163,7 @@ t3= '• Medida del caudal a las 07:00 horas según los '+estado+''
 st.subheader(t3)
 df_precip_freq = pd.DataFrame(df_visualizacion["CAUDAL07H"].value_counts())
 st.line_chart(df_precip_freq)
-st.write('Figura 3. Gráfica de las medidas del caudal en la provincia seleccionada')
+st.write('Figura 5. Gráfica de las medidas del caudal en la provincia seleccionada')
 st.markdown("---")
 
 ###
@@ -179,7 +179,7 @@ startangle=0)
 
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig1)
-st.write('Figura 4. Gráfica circular del porcentaje datos en los distritos de la provincia seleccionada')
+st.write('Figura 6. Gráfica circular del porcentaje datos en los distritos de la provincia seleccionada')
 st.markdown("---")
 
 ###
@@ -195,7 +195,7 @@ startangle=0, textprops={'fontsize': 10})
 
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig1)
-st.write('Figura 5. Gráfica circular del porcentaje de estaciones en la provincia seleccionada')
+st.write('Figura 7. Gráfica circular del porcentaje de estaciones en la provincia seleccionada')
 st.markdown("---")
 
 
