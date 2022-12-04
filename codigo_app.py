@@ -23,7 +23,7 @@ st.title('Datos Hidrometereológicos Gobierno Regional Piura')
 
 st.markdown("""Esta pagina web "app" exploratoria permite visualizar a cualquier usuario los datos hidrometereológicos del Gobierno Regional de Piura""")
 
-st.header('Nosotros el Equipo 3')
+st.header('Nosotros somos el Equipo 3')
 st.markdown("""
            Somos un exelente grupo de estudiantes que se encuentra cursando el 5to ciclo de la carrera de Ingeniería Ambiental en la Universidad 
 	   Peruana Cayetano Heredia. Como proyecto final del curso “Programación Avanzada”,realizamos esta página en base a los conocimientos 
