@@ -8,11 +8,11 @@ Puede ver los trabajos de ciclos pasados en esta lista de Youtube. Puede referir
 resultados de investigación.
 
 ## Integrantes del equipo:
-- Tenorio Farid Franco 
-- Freddy Elías 
+- Tenorio Gomez, Farid Franco 
+- Mamani Sarcco, Freddy Elias  
 - Guevara Valdivia, Jhonatan
 - Cueva Espinoza, Rodrigo Julio
-- Bravo Cotera, Rusbell
+- Bravo Cotera, Russbell
 
 ## Dataset:
 Datos Hidrometereológicos Gobierno Regional Piura
